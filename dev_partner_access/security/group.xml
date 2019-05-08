@@ -1,0 +1,20 @@
+<odoo>
+<!--
+Copyright (C) 2015 DevIntelle Consulting Service Pvt.Ltd (<http://www.devintellecs.com>).
+
+For Module Support : devintelle@gmail.com  or Skype : devintelle 
+ -->
+<data noupdate="0">
+
+    
+    <record id="group_access_own_customer" model="ir.rule">
+        <field name="name">View Own customers</field>
+        <field ref="model_res_partner" name="model_id"/>
+        <field name="domain_force">['|',('user_ids','in',user.id),('id','=',user.partner_id.id)]</field>
+        <field name="groups" eval=""/>
+    </record>
+    
+    </data>
+</odoo>
+
+
